@@ -1,0 +1,81 @@
+.home-products {
+  padding: 10px 20px;
+  background-color: #fff;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  gap: 10px;
+}
+
+.featured-title {
+  font-family: "Jersey 10", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--mainColor);
+  margin: 0;
+  white-space: nowrap;
+}
+
+.view-all {
+  font-family: "Jersey 10", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--mainColor);
+  text-decoration: none;
+
+  padding: 10px 30px;
+  border-radius: 25px;
+  border: 2px solid transparent;
+
+  background-color: transparent;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.view-all:hover {
+  color: var(--secondaryColor);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1024px) {
+  .home-products {
+    padding: 5px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-header {
+    gap: 8px;
+  }
+
+  .home-products .products-grid {
+    gap: 15px;
+  }
+
+  .featured-title,
+  .view-all {
+    font-size: 1.2rem;
+    letter-spacing: 1.8px;
+  }
+}
+
+@media (max-width: 400px) {
+  .section-header {
+    padding-left: 15px;
+    gap: 20px;
+  }
+
+  .featured-title,
+  .view-all {
+    font-size: 1rem;
+    letter-spacing: 1.5px;
+  }
+}

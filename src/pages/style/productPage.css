@@ -1,0 +1,23 @@
+.products-section {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.section-title{
+  padding: 15px;
+}
+
+.filters-horizontal {
+  display: flex;
+  flex-wrap: wrap;
+  /* gap: 15px; */
+  /* padding: 15px 0; */
+  justify-content: flex-start;
+  border-bottom: 1px solid #eee;
+  /* margin-bottom: 20px; */
+}
+
+.filters-horizontal .filter-item {
+  flex: 0 0 auto;
+}
+

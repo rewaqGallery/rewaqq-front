@@ -1,0 +1,280 @@
+.Header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: var(--whityColor);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-family: var(--font-family, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif);
+}
+
+.Header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: auto;
+
+  padding: 10px 20px;
+  gap: 15px;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 100px;
+  object-fit: contain;
+}
+
+.search_box {
+  display: flex;
+  flex: 1;
+  max-width: 500px;
+}
+
+.search_box input {
+  width: 100%;
+  height: 36px;
+  padding: 0 18px;
+  background-color: var(--whityColor);
+  border: 2px solid var(--warmyColor);
+  border-radius: 25px 0 0 25px;
+  font-size: 16px;
+  outline: none;
+}
+
+.search_box input:focus {
+  border-color: var(--mainColor);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, .1);
+}
+
+.search_box button {
+  width: 50px;
+  border: none;
+  border-radius: 0 25px 25px 0;
+
+  background: var(--mainColor);
+  color: var(--whityColor);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.search_box svg {
+  font-size: 18px;
+}
+
+.header_icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icon {
+  position: relative;
+
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  text-decoration: none;
+  color: #333;
+
+  transition: .3s;
+}
+
+.icon:hover {
+  background: var(--warmyColor);
+  transform: translateY(-2px);
+}
+
+.icon svg {
+  font-size: 22px;
+  color: var(--mainColor);
+}
+
+.count {
+  position: absolute;
+  top: -3px;
+  right: -3px;
+
+  min-width: 18px;
+  height: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  font-size: 10px;
+  font-weight: bold;
+
+  background: var(--mainColor);
+  color: var(--whityColor);
+
+  border: 2px solid var(--whityColor);
+}
+
+.nav-btn {
+  padding: 8px 18px;
+  border-radius: 25px;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  border: 2px solid transparent;
+  cursor: pointer;
+
+  transition: .3s;
+}
+
+.login-btn {
+  background: var(--mainColor);
+  color: var(--whityColor);
+}
+
+.login-btn:hover {
+  background: var(--whityColor);
+  color: var(--mainColor);
+  border-color: var(--mainColor);
+}
+
+.logout-btn {
+  background: transparent;
+  color: var(--mainColor);
+  border-color: var(--mainColor);
+}
+
+.logout-btn:hover {
+  background: var(--mainColor);
+  color: var(--whityColor);
+}
+
+.mobile-menu-btn {
+  display: none;
+
+  width: 40px;
+  height: 40px;
+
+  border: none;
+  background: none;
+
+  font-size: 26px;
+  color: var(--mainColor);
+
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+@media (max-width:1000px) {
+
+  .container {
+    padding: 10px;
+  }
+
+  .logo {
+    width: 80px;
+  }
+
+  .header_icons {
+    gap: 5px;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header_icons.mobile {
+
+    position: absolute;
+
+    top: 100%;
+    right: 10px;
+
+    width: 180px;
+
+    flex-direction: column;
+
+    background: var(--whityColor);
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .2);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+
+    transition: .3s;
+  }
+
+  .header_icons.mobile.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .header_icons.mobile .icon {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .header_icons.mobile .icon svg {
+    margin-right: 10px;
+  }
+
+  .header_icons.mobile .count {
+    position: relative;
+    margin-left: auto;
+  }
+
+  .nav-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+}
+
+@media (max-width:480px) {
+  .logo {
+    width: 60px;
+  }
+
+  .header_icons.mobile {
+    width: 160px;
+  }
+
+  .search_box input {
+    border-radius: 25px;
+    font-size: 12px;
+    height: 27px;
+
+  }
+
+  .search_box button {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    height: 20px;
+    width: 20px;
+  }
+}

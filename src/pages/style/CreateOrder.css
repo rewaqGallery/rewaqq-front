@@ -1,0 +1,295 @@
+.make-order-page {
+  min-height: 80vh;
+  padding: 40px 20px;
+  background-color: var(--whityColor);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.make-order-container {
+  width: 100%;
+  max-width: 900px;
+  background: #fff;
+  border-radius: 18px;
+  padding: 32px;
+  border: 2px solid var(--warmyColor);
+  box-shadow: 0 15px 35px rgba(39, 71, 96, 0.15);
+}
+
+.make-order-title {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  text-align: center;
+  font-family: "Jersey 10", sans-serif;
+  letter-spacing: 2px;
+}
+
+.order-items {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 30px;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  /* background: #fff; */
+  background-color: var(--whityColor);
+  padding: 14px 18px;
+  border-radius: 12px;
+  border: 1px solid var(--warmyColor);
+  transition: 0.2s ease;
+}
+
+.order-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(39, 71, 96, 0.12);
+}
+
+.order-item span {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* ================= Shipping Form ================= */
+.shipping-form {
+  margin-bottom: 30px;
+}
+
+.form-title {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  font-family: "Jersey 10", sans-serif;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.form-group label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--mainColor);
+  letter-spacing: 1px;
+}
+
+.form-group input,
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group textarea {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 2px solid var(--warmyColor);
+  font-size: 0.9rem;
+  transition: 0.25s ease;
+  resize: none;
+  background: #fff;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--secondaryColor);
+  box-shadow: 0 0 0 3px rgba(57, 105, 109, 0.15);
+}
+
+.form-row {
+  display: flex;
+  gap: 14px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+/* ================= Order Summary ================= */
+.order-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.order-total {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* ================= Buttons ================= */
+.order-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.confirm-btn,
+.back-btn {
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+/* Confirm */
+.confirm-btn {
+  background: linear-gradient(135deg,
+      var(--secondaryColor),
+      var(--mainColor));
+  color: white;
+  border: none;
+}
+
+.confirm-btn:hover {
+  background: var(--mainColor);
+  transform: translateY(-2px);
+}
+
+/* Back */
+.back-btn {
+  background: transparent;
+  color: var(--mainColor);
+  border: 2px solid var(--mainColor);
+}
+
+.back-btn:hover {
+  background: var(--maintGreen);
+  transform: translateY(-2px);
+}
+
+/* ================= Error ================= */
+.order-error {
+  color: #dc3545;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+/* ================= Popup Overlay ================= */
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(39, 71, 96, 0.25);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* ================= Popup ================= */
+.popup {
+  background: #fff;
+  border-radius: 20px;
+  padding: 35px 40px;
+  text-align: center;
+  border: 2px solid var(--warmyColor);
+  box-shadow: 0 20px 45px rgba(39, 71, 96, 0.2);
+  animation: popupScale 0.35s ease;
+  max-width: 420px;
+  width: 90%;
+}
+
+.popup p {
+  font-size: 1.2rem;
+  color: var(--mainColor);
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+
+.popup-close {
+  background: var(--mainColor);
+  color: white;
+  border-radius: 30px;
+  padding: 10px 26px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.popup-close:hover {
+  background: var(--secondaryColor);
+  transform: translateY(-2px);
+}
+
+/* ================= Animation ================= */
+@keyframes popupScale {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ================= Loading ================= */
+.loading {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--secondaryColor);
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 768px) {
+  .make-order-page {
+    padding: 20px 15px;
+  }
+
+  .make-order-container {
+    padding: 22px;
+  }
+
+  .order-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .order-summary {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .order-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .confirm-btn,
+  .back-btn {
+    width: 100%;
+    padding: 14px;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .make-order-title {
+    font-size: 1.8rem;
+  }
+
+  .order-total {
+    font-size: 1.8rem;
+    font-weight: 400;
+  }
+
+  .popup {
+    font-size: 1rem;
+    padding: 22px;
+  }
+}
