@@ -3,7 +3,7 @@ import ProductsManager from "./product/ProductsManager";
 import CategoriesManager from "./category/CategoriesManager";
 import OrdersManager from "./OrdersManager";
 import UsersManager from "./UsersManager";
-import "./style/Dashboard.css";
+import "./Style/Dashboard.css";
 
 export default function Dashboard() {
   const [activeTab, setActiveTab] = useState("products");
